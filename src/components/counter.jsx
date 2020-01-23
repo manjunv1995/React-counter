@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import { Fragment } from "react";
 
 class Counter extends Component {
   state = {
-    value: this.props.value
+    value: this.props.counter.value
   };
 
   handleIncrement = product => {
@@ -20,7 +21,7 @@ class Counter extends Component {
           Increment
         </button>
         <button
-          onClick={() => this.props.onDelete("button is going")}
+          onClick={this.props.onDelete}
           className="btn btn-danger m-2 btn-sm"
         >
           Delete
