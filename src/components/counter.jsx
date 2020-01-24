@@ -3,13 +3,16 @@ import { Fragment } from "react";
 
 class Counter extends Component {
   state = {
-    value: this.props.counter.value
+    value: this.props.value
   };
 
   handleIncrement = product => {
     this.setState({ value: product + 1 });
   };
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({ value: nextProps.value });
+  }
   render() {
     return (
       <div>
